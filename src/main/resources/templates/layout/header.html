@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<header th:fragment="header" class="header">
+    <div class="header-left">
+        <span class="header-info">
+            Projeto feito como treino de Java + Thymeleaf
+        </span>
+    </div>
+
+    <nav class="header-nav">
+        <a th:href="@{/chat}">Chat</a>
+        <a th:href="@{/books}">Livros</a>
+        <a th:href="@{/games}">Jogos</a>
+        <a th:href="@{/music}">Músicas</a>
+        <a th:href="@{/random}">Aleatório</a>
+    </nav>
+</header>
+
+</body>
+</html>

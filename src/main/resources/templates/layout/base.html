@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title} ?: 'Markzs'">Markzs</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+<!-- Header -->
+<div th:replace="layout/header :: header"></div>
+
+<!-- Conteúdo principal -->
+<main class="container">
+    <div th:replace="${content}"></div>
+</main>
+
+</body>
+</html>
