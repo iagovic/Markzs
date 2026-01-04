@@ -1,4 +1,9 @@
 package com.example.demo.model.enums;
 
-public class SelectionType {
+public enum SelectionType {
+    BOOKS,
+    GAMES,
+    MUSIC,
+    RANDOM,
+    CHAT
 }

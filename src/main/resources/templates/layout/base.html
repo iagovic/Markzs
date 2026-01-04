@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+      th:fragment="layout(content)">
 
 <head>
     <meta charset="UTF-8">
@@ -10,10 +11,8 @@
 
 <body>
 
-<!-- Header -->
 <div th:replace="layout/header :: header"></div>
 
-<!-- Conteúdo principal -->
 <main class="container">
     <div th:replace="${content}"></div>
 </main>

@@ -1,10 +1,37 @@
-<html lang="pt-br"
-      xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
 
-<div th:fragment="content">
+<body>
+
+<!-- HEADER -->
+<div th:replace="layout/header :: header"></div>
+
+<main class="container">
+
     <h1>Chat</h1>
 
-    <div class="chat-box">
-        <p>Aqui ficará o chat futuramente</p>
+    <!-- FORM DE ENVIO -->
+    <form method="post" th:action="@{/chat}">
+        <textarea name="content" placeholder="Digite sua mensagem"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <!-- LISTA DE MENSAGENS -->
+    <div class="messages">
+        <div th:each="msg : ${messages}">
+            <p>
+                <strong th:text="${msg.author.username}">Usuário</strong>:
+                <span th:text="${msg.content}">Mensagem</span>
+            </p>
+        </div>
     </div>
-</div>
+
+</main>
+
+</body>
+</html>
